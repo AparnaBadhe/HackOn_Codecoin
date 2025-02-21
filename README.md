@@ -28,19 +28,14 @@ Welcome to **Learning Code Hub**, a platform designed to help beginners and enth
    git clone https://github.com/yourusername/learning-code-hub.git
    cd learning-code-hub
    ```
-2. Install dependencies:
+2. Navigate to the frontend directory and install dependencies:
    ```bash
+   cd frontend
    npm install
    ```
-3. Set up environment variables (`.env` file):
-   ```env
-   PORT=3000
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_secret_key
-   ```
-4. Start the development server:
+3. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## 🎯 How to Contribute
