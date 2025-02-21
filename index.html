@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+</head>
+<body>
+    <h2>Real-Time Quiz</h2>
+    <button onclick="sendAnswer()">Answer Question</button>
+    <p id="score">Score: 0</p>
+
+    <script>
+        const ws = new WebSocket("ws://localhost:8080");
+
+        ws.onopen = () => {
+            const name = prompt("Enter your name:");
+            ws.send(JSON.stringify({ type: "join", name }));
+        };
+
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            if (data.type === "score") {
+                document.getElementById("score").innerText = `Score: ${data.score}`;
+            }
+        };
+
+        function sendAnswer() {
+            ws.send(JSON.stringify({ type: "answer", timestamp: Date.now() }));
+        }
+    </script>
+</body>
+</html>
+

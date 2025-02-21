@@ -1,0 +1,86 @@
+colors{
+  font:#222222;
+  bg:#bbcde5;
+  kk:#1C5D99;
+  DK:#639FAB;
+}
+*{
+margin:0;
+padding:0;
+}
+h1{
+  font-size: 2rem;
+}
+.flexbox{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.button{
+background:black;
+color:white;
+padding:0.2rem 1rem ;
+border-radius:10px;
+transition:0.2s;
+margin:10px;
+}
+.button:hover{
+border:2px solid black;
+background:white;
+color:black;
+}
+.navbar ,.navbar>div{
+  justify-content:space-around;
+}
+.navbar>div{
+  width:20%;
+}
+.nav-pro{
+width:20% !important;
+}
+.nav-pro>p{
+background:linear-gradient(to left,red,yellow);
+border-radius:10px;
+padding:0.2rem;
+}
+.hero{
+height:100vh;
+gap:60px;
+}
+.hero>div{
+width:35%;
+}
+.hero h1{
+text-align:center;
+}
+.hero p{
+margin:20px;
+}
+.lesson-div{
+  flex-direction:column;
+  gap:20px;
+}
+.lesson-div>span{
+background:#bbcde5;
+width:80%;
+padding:1rem;
+border-radius:20px;
+}
+.lesson-div>div{
+  width:100%;
+}
+.lesson-div>h1{
+  margin: 20px;
+  text-align:center;
+}
+.question-div{
+  height:100vh;
+  gap:50px;
+}
+.question-div>div{
+width:40%;
+height:100%;
+}
+.content-div div{
+ margin:30px; 
+}
